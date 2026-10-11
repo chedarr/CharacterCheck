@@ -75,7 +75,11 @@ fun CharacterCheck() {
 
         Button(
             onClick = {
-                result = "Проверка пока не реализована"
+                result = if (symbol.length != 1) {
+                    "Введите ровно один символ"
+                } else {
+                    "Введен один символ"
+                }
             }
         ) {
             Text("Проверить")
@@ -90,8 +94,6 @@ fun CharacterCheck() {
         )
     }
 }
-
-
 
 
 @Preview(showBackground = true)
